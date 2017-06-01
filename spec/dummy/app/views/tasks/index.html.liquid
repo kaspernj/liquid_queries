@@ -1,0 +1,5 @@
+{% for task in tasks.ransack.name_eq.test %}
+  <div class="task" data-task-id="{{ task.id }}">
+    {{ task.name }}
+  </div>
+{% endfor %}
