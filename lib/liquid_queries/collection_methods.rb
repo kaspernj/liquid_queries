@@ -12,6 +12,6 @@ module LiquidQueries::CollectionMethods
   end
 
   def ransack
-    LiquidQueries::RansackQuery.new(collection: @collection)
+    LiquidQueries::RansackQuery.new(collection: collection)
   end
 end
