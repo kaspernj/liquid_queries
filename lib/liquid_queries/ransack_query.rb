@@ -4,7 +4,7 @@ class LiquidQueries::RansackQuery < Liquid::Drop
   end
 
   def before_method(key)
-    LiquidQueries::LiquidRansackValue.new(
+    LiquidQueries::RansackQueryValue.new(
       collection: @collection,
       key: key
     )
