@@ -1,4 +1,4 @@
-module CollectionMethods
+module LiquidQueries::CollectionMethods
   def all
     collection
   end
