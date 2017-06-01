@@ -12,6 +12,7 @@ gemspec
 
 group :development, :test do
   gem "best_practice_project", "0.0.10"
+  gem "liquid", "3.0.6"
   gem "liquid-rails", "0.1.3"
   gem "rspec-rails", "3.6.0"
   gem "rubocop", "0.49.1"
