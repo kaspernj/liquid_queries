@@ -21,6 +21,16 @@ Kasper's ID is: {{ my_drop.users.ransack.first_name_eq.Kasper.first.id }}
 Kasper's last name is {{ my_drop.users.ransack.first_name_eq.Kasper.first.last_name }}
 ```
 
+Or something like this:
+
+```liquid
+Users with a name that contains "kasper":
+
+{% for user in my_drop.users.ransack.name_cont.kasper %}
+  {{ user.id }} - {{ user.first_name }} {{ user.last_name }}
+{% endfor %}
+```
+
 ## Installation
 Add this line to your application's Gemfile:
 
