@@ -1,8 +1,25 @@
 # LiquidQueries
-Short description and motivation.
+
+Perform queries on your ActiveRecord collections directly from Liquid templates with the help of Ransack.
 
 ## Usage
-How to use my plugin.
+
+Add a method to a drop that returns a collection:
+
+```ruby
+class MyDrop < Liquid::Drop
+  def users
+    LiquidQueries::Collection.new(collection: User.all)
+  end
+end
+```
+
+Then do something like this in your Liquid template:
+
+```liquid
+Kasper's ID is: {{ my_drop.users.ransack.first_name_eq.Kasper.first.id }}
+Kasper's last name is {{ my_drop.users.ransack.first_name_eq.Kasper.first.last_name }}
+```
 
 ## Installation
 Add this line to your application's Gemfile:
