@@ -3,6 +3,10 @@ module LiquidQueries::CollectionMethods
     collection
   end
 
+  def empty?
+    collection.empty?
+  end
+
   def first
     collection.first
   end
@@ -11,7 +15,15 @@ module LiquidQueries::CollectionMethods
     collection.last
   end
 
+  def pop
+    collection.pop
+  end
+
   def ransack
     LiquidQueries::RansackQuery.new(collection: collection)
+  end
+
+  def shift
+    collection.shift
   end
 end
