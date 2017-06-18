@@ -3,6 +3,10 @@ module LiquidQueries::CollectionMethods
     collection
   end
 
+  def any?
+    collection.any?
+  end
+
   def empty?
     collection.empty?
   end
