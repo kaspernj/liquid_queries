@@ -7,6 +7,10 @@ module LiquidQueries::CollectionMethods
     collection.any?
   end
 
+  def current_page
+    collection.current_page
+  end
+
   def empty?
     collection.empty?
   end
@@ -29,5 +33,13 @@ module LiquidQueries::CollectionMethods
 
   def shift
     collection.shift
+  end
+
+  def total_entries
+    collection.total_entries
+  end
+
+  def total_pages
+    collection.total_pages
   end
 end
