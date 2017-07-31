@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    liquid_queries (0.0.6)
+    liquid_queries (0.0.7)
       rails (>= 4.0.0)
 
 GEM
