@@ -43,6 +43,10 @@ module LiquidQueries::CollectionMethods
     collection.shift
   end
 
+  def to_a
+    collection.to_a
+  end
+
   def total_entries
     collection.total_entries
   end

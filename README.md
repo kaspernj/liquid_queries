@@ -26,7 +26,7 @@ Or something like this:
 ```liquid
 Users with a name that contains "kasper":
 
-{% for user in my_drop.users.ransack.name_cont.kasper %}
+{% for user in my_drop.users.ransack.name_cont.kasper.to_a %}
   {{ user.id }} - {{ user.first_name }} {{ user.last_name }}
 {% endfor %}
 ```

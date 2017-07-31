@@ -21,4 +21,10 @@ describe LiquidQueries::CollectionMethods do
       expect(sql).to eq 'SELECT "tasks".* FROM "tasks" ORDER BY "tasks"."name" DESC'
     end
   end
+
+  describe "#to_a" do
+    it "returns an array" do
+      expect(collection.to_a).to be_an Array
+    end
+  end
 end
