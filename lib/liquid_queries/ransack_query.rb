@@ -9,4 +9,8 @@ class LiquidQueries::RansackQuery < Liquid::Drop
       key: key
     )
   end
+
+  def liquid_method_missing(key)
+    before_method(key)
+  end
 end

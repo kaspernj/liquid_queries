@@ -8,4 +8,8 @@ class LiquidQueries::OrderQuery < Liquid::Drop
       collection: @collection.order(key)
     )
   end
+
+  def liquid_method_missing(key)
+    before_method(key)
+  end
 end

@@ -9,4 +9,8 @@ class LiquidQueries::RansackQueryValue < Liquid::Drop
       collection: @collection.ransack(@key => value).result
     )
   end
+
+  def liquid_method_missing(key)
+    before_method(key)
+  end
 end
