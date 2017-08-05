@@ -7,6 +7,10 @@ module LiquidQueries::CollectionMethods
     collection.any?
   end
 
+  def count
+    collection.count
+  end
+
   def current_page
     collection.current_page
   end
@@ -23,12 +27,16 @@ module LiquidQueries::CollectionMethods
     collection.last
   end
 
+  def length
+    collection.length
+  end
+
   def order
     ::LiquidQueries::OrderQuery.new(collection: collection)
   end
 
   def pop
-    collection.pop
+    to_a.pop
   end
 
   def ransack
@@ -39,12 +47,16 @@ module LiquidQueries::CollectionMethods
     ::LiquidQueries::Collection.new(collection: collection.reverse_order)
   end
 
+  def size
+    collection.size
+  end
+
   def shift
-    collection.shift
+    to_a.shift
   end
 
   def to_a
-    collection.to_a
+    @_to_a ||= collection.to_a
   end
 
   def total_entries
